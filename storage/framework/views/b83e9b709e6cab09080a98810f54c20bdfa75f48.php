@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\tubesSIG\resources\views/layouts/view_frontend.blade.php ENDPATH**/ ?>
