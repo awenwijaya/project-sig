@@ -55,3 +55,8 @@ Route::get('/sekolah/delete/{id}', [SekolahController::class, 'delete']);
 
 //tempat ibadah
 Route::get('/tempatibadah', [TempatIbadahController::class, 'index'])->name('tempatibadah');
+Route::get('/tempatibadah/add', [TempatIbadahController::class, 'add']);
+Route::post('/tempatibadah/insert', [TempatIbadahController::class, 'insert']);
+Route::get('/tempatibadah/edit/{id}', [TempatIbadahController::class, 'edit']);
+Route::post('/tempatibadah/update/{id}', [TempatIbadahController::class, 'update']);
+Route::get('/tempatibadah/delete/{id}', [TempatIbadahController::class, 'delete']);
