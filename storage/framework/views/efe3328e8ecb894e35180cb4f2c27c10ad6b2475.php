@@ -97,7 +97,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/pengguna" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>User</p>
             </a>
@@ -109,21 +109,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-compass"></i>
-              <p>Jenis Potensi Desa</p>
+            <a href="/potensidesa" class="nav-link">
+              <i class="nav-icon fas fa-search-location"></i>
+              <p>Potensi Desa</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/sekolah" class="nav-link">
               <i class="nav-icon fas fa-graduation-cap"></i>
               <p>Sekolah</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-graduation-cap"></i>
-              <p>Jenjang Sekolah</p>
             </a>
           </li>
           <li class="nav-item">
@@ -133,7 +127,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/tempatibadah" class="nav-link">
               <i class="nav-icon fas fa-praying-hands"></i>
               <p>Tempat Ibadah</p>
             </a>

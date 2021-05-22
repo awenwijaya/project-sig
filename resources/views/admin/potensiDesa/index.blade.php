@@ -6,7 +6,7 @@
                 <h3 class="card-title">Data {{ $title }}</h3>
 
                 <div class="card-tools">
-                  <a href="/desa/add" type="button" class="btn btn-primary btn-sm btn-flat">Tambah Desa</a>
+                  <a href="/potensidesa/add" type="button" class="btn btn-primary btn-sm btn-flat">Tambah Potensi Desa</a>
                 </div>
                 <!-- /.card-tools -->
               </div>
@@ -16,21 +16,21 @@
                     <thead>
                       <tr>
                         <th width="50px" class="text-center">No</th>
-                        <th class="text-center">Desa</th>
-                        <th class="text-center">Warna</th>
+                        <th class="text-center">Potensi Desa</th>
+                        <th class="text-center">Ikon</th>
                         <th class="text-center" width="80px">Tindakan</th>
                       </tr>
                     </thead>
                     <tbody>
                       <?php $no=1; ?>
-                      @foreach($desa as $d)
+                      @foreach($potensiDesa as $d)
                       <tr>
                         <td class="text-center">{{ $no++ }}</td>
-                        <td class="text-center">{{ $d->nama_desa }}</td>
-                        <td style="background-color: {{$d->warna}}"></td>
+                        <td class="text-center">{{ $d->nama_potensi }}</td>
+                        <td class="text-center"><img src="{{ asset('icon') }}/{{ $d->icon }}" width="70px";height="70px";></td>
                         <td class="text-center">
-                          <button class="btn btn-sm btn-flat btn-warning"><a href="/desa/edit/{{ $d->id }}" ><i class="fa fa-edit"></i></a></button>
-                          <button class="btn btn-sm btn-flat btn-danger"><a href="/desa/delete/{{ $d->id }}" ><i class="fa fa-trash"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-warning"><a href="/potensidesa/edit/{{ $d->id }}" ><i class="fa fa-edit"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-danger"><a href="/potensidesa/delete/{{ $d->id }}" ><i class="fa fa-trash"></i></a></button>
                       </tr>
                       @endforeach
                     </tbody>

@@ -6,7 +6,7 @@
                 <h3 class="card-title">Data {{ $title }}</h3>
 
                 <div class="card-tools">
-                  <a href="/desa/add" type="button" class="btn btn-primary btn-sm btn-flat">Tambah Desa</a>
+                  <a href="/tempatibadah/add" type="button" class="btn btn-primary btn-sm btn-flat">Tambah Tempat Ibadah</a>
                 </div>
                 <!-- /.card-tools -->
               </div>
@@ -16,21 +16,27 @@
                     <thead>
                       <tr>
                         <th width="50px" class="text-center">No</th>
-                        <th class="text-center">Desa</th>
-                        <th class="text-center">Warna</th>
+                        <th class="text-center">Nama Tempat Ibadah</th>
+                        <th class="text-center">Potensi ID</th>
+                        <th class="text-center">Agama</th>
+                        <th class="text-center">Alamat</th>
+                        <th class="text-center">Koordinat</th>
                         <th class="text-center" width="80px">Tindakan</th>
                       </tr>
                     </thead>
                     <tbody>
                       <?php $no=1; ?>
-                      @foreach($desa as $d)
+                      @foreach($tempatibadah as $d)
                       <tr>
                         <td class="text-center">{{ $no++ }}</td>
-                        <td class="text-center">{{ $d->nama_desa }}</td>
-                        <td style="background-color: {{$d->warna}}"></td>
+                        <td class="text-center">{{ $d->nama_tempat_ibadah }}</td>
+                        <td class="text-center">{{ $d->id_potensi }}</td>
+                        <td class="text-center">{{ $d->id_agama }}</td>
+                        <td class="text-center">{{ $d->alamat }}</td>
+                        <td class="text-center">{{ $d->koordinat }}</td>
                         <td class="text-center">
-                          <button class="btn btn-sm btn-flat btn-warning"><a href="/desa/edit/{{ $d->id }}" ><i class="fa fa-edit"></i></a></button>
-                          <button class="btn btn-sm btn-flat btn-danger"><a href="/desa/delete/{{ $d->id }}" ><i class="fa fa-trash"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-warning"><a href="/tempatibadah/edit/{{ $d->id }}" ><i class="fa fa-edit"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-danger"><a href="/tempatibadah/delete/{{ $d->id }}" ><i class="fa fa-trash"></i></a></button>
                       </tr>
                       @endforeach
                     </tbody>

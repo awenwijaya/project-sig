@@ -4,10 +4,6 @@
             <div class="card card-outline card-primary">
               <div class="card-header">
                 <h3 class="card-title">Data {{ $title }}</h3>
-
-                <div class="card-tools">
-                  <a href="/desa/add" type="button" class="btn btn-primary btn-sm btn-flat">Tambah Desa</a>
-                </div>
                 <!-- /.card-tools -->
               </div>
               <!-- /.card-header -->
@@ -16,21 +12,17 @@
                     <thead>
                       <tr>
                         <th width="50px" class="text-center">No</th>
-                        <th class="text-center">Desa</th>
-                        <th class="text-center">Warna</th>
-                        <th class="text-center" width="80px">Tindakan</th>
+                        <th class="text-center">Pengguna</th>
+                        <th class="text-center">Email</th>
                       </tr>
                     </thead>
                     <tbody>
                       <?php $no=1; ?>
-                      @foreach($desa as $d)
+                      @foreach($pengguna as $d)
                       <tr>
                         <td class="text-center">{{ $no++ }}</td>
-                        <td class="text-center">{{ $d->nama_desa }}</td>
-                        <td style="background-color: {{$d->warna}}"></td>
-                        <td class="text-center">
-                          <button class="btn btn-sm btn-flat btn-warning"><a href="/desa/edit/{{ $d->id }}" ><i class="fa fa-edit"></i></a></button>
-                          <button class="btn btn-sm btn-flat btn-danger"><a href="/desa/delete/{{ $d->id }}" ><i class="fa fa-trash"></i></a></button>
+                        <td class="text-center">{{ $d->name }}</td>
+                        <td class="text-center">{{ $d->email }}</td>
                       </tr>
                       @endforeach
                     </tbody>

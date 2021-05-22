@@ -22,11 +22,14 @@
         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		id: 'mapbox/dark-v10'});
+
+
+    var desa = L.layerGroup();
     
     var map = L.map('maps', {
         center: [-8.622676635119882, 115.21138185055722],
         zoom: 15,
-        layers: [peta1]
+        layers: [peta1, desa]
     });
 
     var baseMaps = {
@@ -36,8 +39,22 @@
         "Dark" : peta4
     };
 
-    L.control.layers(baseMaps).addTo(map);
+    var overlayer = {
+        "Desa" : desa
+    };
 
+    L.control.layers(baseMaps, overlayer).addTo(map);
+
+    @foreach($desa as $d)
+        L.geoJSON(<?= $d->batas_desa ?>, {
+            style: {
+                color: 'white',
+                fillColor: '{{ $d->warna }}',
+                fillOpacity: 0.7
+            },
+        }).addTo(desa).bindPopup("{{ $d->nama_desa }}");
+
+    @endforeach
 
 </script>
 @endsection
