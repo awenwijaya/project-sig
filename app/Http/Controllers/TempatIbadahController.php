@@ -34,14 +34,12 @@ class TempatIbadahController extends Controller
 		Request()->validate(
 			[
 				'nama_tempat_ibadah' => 'required',
-				'id_potensi' => 'required',
 				'id_agama' => 'required',
 				'alamat' => 'required',
 				'koordinat' => 'required',
 			],
 			[
 				'nama_tempat_ibadah.required' => 'Nama tempat ibadah belum diisi',
-				'id_potensi.required' => 'ID Potensi belum diisi',
 				'id_agama.required' => 'ID Agama belum diisi',
 				'alamat.required' => 'Alamat belum diisi',
 				'koordinat' => 'Koordinat belum diisi'
@@ -49,7 +47,7 @@ class TempatIbadahController extends Controller
 
 			$data = [
 				'nama_tempat_ibadah' => Request()->nama_tempat_ibadah,
-				'id_potensi' => Request()->id_potensi,
+				'id_jenis_potensi' => '3',
 				'id_agama' => Request()->id_agama,
 				'alamat' => Request()->alamat,
 				'koordinat' => Request()->koordinat
@@ -74,14 +72,12 @@ class TempatIbadahController extends Controller
 		Request()->validate(
 			[
 				'nama_tempat_ibadah' => 'required',
-				'id_potensi' => 'required',
 				'id_agama' => 'required',
 				'alamat' => 'required',
 				'koordinat' => 'required',
 			],
 			[
 				'nama_tempat_ibadah.required' => 'Nama tempat ibadah belum diisi',
-				'id_potensi.required' => 'ID Potensi belum diisi',
 				'id_agama.required' => 'ID Agama belum diisi',
 				'alamat.required' => 'Alamat belum diisi',
 				'koordinat' => 'Koordinat belum diisi'
@@ -89,7 +85,7 @@ class TempatIbadahController extends Controller
 
 			$data = [
 				'nama_tempat_ibadah' => Request()->nama_tempat_ibadah,
-				'id_potensi' => Request()->id_potensi,
+				'id_potensi' => '3',
 				'id_agama' => Request()->id_agama,
 				'alamat' => Request()->alamat,
 				'koordinat' => Request()->koordinat

@@ -21,15 +21,6 @@
                           @enderror
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label>ID Potensi</label>
-                        <input name="id_potensi" type="text" class="form-control" placeholder="ID Potensi" value="{{ $sekolah->id_potensi }}">
-                        <div class="text-danger">
-                          @error('id_potensi')
-                          {{ $message }}
-                          @enderror
-                        </div>
-                      </div>
                     </div>
                     <div class="col-sm-6">
                       <!-- text input -->

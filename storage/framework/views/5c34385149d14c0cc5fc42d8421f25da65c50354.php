@@ -43,14 +43,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <li class="nav-item">
             <a href="/" class="nav-link">Home</a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Contact</a>
-          </li>
           <li class="nav-item dropdown">
-            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
+            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Potensi Desa</a>
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-              <li><a href="#" class="dropdown-item">Some action </a></li>
-              <li><a href="#" class="dropdown-item">Some other action</a></li>
+                <li><a href="/potensisekolah" class="dropdown-item">Sekolah</a></li>
+                <li><a href="/potensitempatibadah" class="dropdown-item">Tempat Ibadah</a></li>
+                <li><a href="/potensitempatmakan" class="dropdown-item">Tempat Makan</a></li>
             </ul>
           </li>
         </ul>
@@ -60,7 +58,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
         <li class="nav-item">
           <a class="nav-link" href="<?php echo e(route('login')); ?>">
-            <i class="fas fa-user"></i>Login
+            <i class="fas fa-toolbox"></i>Admin
           </a>
         </li>
       </ul>
@@ -75,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0"> Sistem Informasi <small>Geografis</small></h1>
+            <h1 class="m-0"> <?php echo e($title); ?></h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->

@@ -36,6 +36,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
+      <li class="nav-item">
+        <a class="nav-link" href="/" role="button">
+          <i class="fas fa-home"></i>Home
+        </a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -110,7 +115,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <li class="nav-item">
             <a href="/potensidesa" class="nav-link">
               <i class="nav-icon fas fa-search-location"></i>
-              <p>Potensi Desa</p>
+              <p>Jenis Potensi Desa</p>
             </a>
           </li>
           <li class="nav-item">
@@ -120,7 +125,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/tempatmakan" class="nav-link">
               <i class="nav-icon fas fa-hamburger"></i>
               <p>Tempat Makan</p>
             </a>

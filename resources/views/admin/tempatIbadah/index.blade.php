@@ -17,7 +17,6 @@
                       <tr>
                         <th width="50px" class="text-center">No</th>
                         <th class="text-center">Nama Tempat Ibadah</th>
-                        <th class="text-center">Potensi ID</th>
                         <th class="text-center">Agama</th>
                         <th class="text-center">Alamat</th>
                         <th class="text-center">Koordinat</th>
@@ -30,7 +29,6 @@
                       <tr>
                         <td class="text-center">{{ $no++ }}</td>
                         <td class="text-center">{{ $d->nama_tempat_ibadah }}</td>
-                        <td class="text-center">{{ $d->id_potensi }}</td>
                         <td class="text-center">{{ $d->id_agama }}</td>
                         <td class="text-center">{{ $d->alamat }}</td>
                         <td class="text-center">{{ $d->koordinat }}</td>

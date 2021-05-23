@@ -8,6 +8,8 @@ use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\PotensiDesaController;
 use App\Http\Controllers\SekolahController;
 use App\Http\Controllers\TempatIbadahController;
+use App\Http\Controllers\TempatMakanController;
+use App\Http\Controllers\PotensiDaerahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +39,7 @@ Route::get('/desa/delete/{id}', [DesaController::class, 'delete']);
 //user
 Route::get('/pengguna', [PenggunaController::class, 'index'])->name('pengguna');
 
-//potensidesa
+//jenis potensidesa
 Route::get('/potensidesa', [PotensiDesaController::class, 'index'])->name('potensidesa');
 Route::get('/potensidesa/add', [PotensiDesaController::class, 'add']);
 Route::post('/potensidesa/insert', [PotensiDesaController::class, 'insert']);
@@ -60,3 +62,17 @@ Route::post('/tempatibadah/insert', [TempatIbadahController::class, 'insert']);
 Route::get('/tempatibadah/edit/{id}', [TempatIbadahController::class, 'edit']);
 Route::post('/tempatibadah/update/{id}', [TempatIbadahController::class, 'update']);
 Route::get('/tempatibadah/delete/{id}', [TempatIbadahController::class, 'delete']);
+
+//tempatmakan
+Route::get('/tempatmakan', [TempatMakanController::class, 'index'])->name('tempatmakan');
+Route::get('/tempatmakan/add', [TempatMakanController::class, 'add']);
+Route::post('/tempatmakan/insert', [TempatMakanController::class, 'insert']);
+Route::get('/tempatmakan/edit/{id}', [TempatMakanController::class, 'edit']);
+Route::post('/tempatmakan/update/{id}', [TempatMakanController::class, 'update']);
+Route::get('/tempatmakan/delete/{id}', [TempatMakanController::class, 'delete']);
+
+Route::get('/potensidaerah', [PotensiDaerahController::class, 'index'])->name('potensidaerah');
+
+Route::get('/potensisekolah', [WebController::class, 'ShowDataSekolah']);
+Route::get('/potensitempatibadah' , [WebController::class, 'ShowDataTempatIbadah']);
+Route::get('/potensitempatmakan', [WebController::class, 'ShowDataTempatMakan']);

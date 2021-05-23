@@ -7,7 +7,7 @@
 <br>
             <div class="card card-outline card-primary">
               <div class="card-header">
-                <h3 class="card-title">Informasi Logo</h3>
+                <h3 class="card-title">Informasi Tempat Ibadah</h3>
 
                 <!-- /.card-tools -->
               </div>
@@ -17,17 +17,21 @@
                     <thead>
                       <tr>
                         <th width="50px" class="text-center">No</th>
-                        <th class="text-center">Potensi Desa</th>
-                        <th class="text-center">Ikon</th>
+                        <th class="text-center">Nama Tempat Ibadah</th>
+                        <th class="text-center">Agama</th>
+                        <th class="text-center">Alamat</th>
+                        <th class="text-center">Koordinat</th>
                       </tr>
                     </thead>
                     <tbody>
                       <?php $no=1; ?>
-                      @foreach($potensiDesa as $d)
+                      @foreach($tempatibadah as $d)
                       <tr>
                         <td class="text-center">{{ $no++ }}</td>
-                        <td class="text-center">{{ $d->nama_potensi }}</td>
-                        <td class="text-center"><img src="{{ asset('icon') }}/{{ $d->icon }}" width="70px";height="70px";></td>
+                        <td class="text-center">{{ $d->nama_tempat_ibadah }}</td>
+                        <td class="text-center">{{ $d->agama }}</td>
+                        <td class="text-center">{{ $d->alamat }}</td>
+                        <td class="text-center">{{ $d->koordinat }}</td>
                       </tr>
                       @endforeach
                     </tbody>
@@ -91,27 +95,6 @@
             },
         }).addTo(desa).bindPopup("{{ $d->nama_desa }}");
 
-    @endforeach
-
-    @foreach($sekolah as $s)
-        var iconSekolah = L.icon({
-            iconUrl: '{{ asset('icon') }}/{{ $s->icon }}',
-            iconSize: [25, 25],
-        });
-
-        L.marker([<?= $s->koordinat ?>], {icon: iconSekolah})
-        .addTo(map)
-        .bindPopup('Nama sekolah : <?= $s->nama_sekolah ?> <br> Alamat : <?= $s->alamat ?> <br> Koordinat : <?= $s->koordinat ?>');
-    @endforeach
-
-    @foreach($tempatmakan as $m)
-        var iconTempatMakan = L.icon({
-            iconUrl: '{{ asset('icon') }}/{{ $m->icon }}',
-            iconSize: [25, 25],
-        });
-
-        L.marker([<?= $m->koordinat ?>], {icon: iconTempatMakan}).addTo(map)
-        .bindPopup('Nama: <?= $m->nama ?> <br> Alamat: <?= $m->alamat ?> <br> Koordinat: <?= $m->koordinat ?>');
     @endforeach
 
     @foreach($tempatibadah as $i)

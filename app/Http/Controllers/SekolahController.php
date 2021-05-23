@@ -37,7 +37,6 @@ class SekolahController extends Controller
     	Request()->validate(
     		[
     			'nama_sekolah' => 'required',
-    			'id_potensi' => 'required',
     			'id_jenjang_sekolah' => 'required',
     			'id_jenis_sekolah' => 'required',
     			'alamat_sekolah' => 'required',
@@ -45,7 +44,6 @@ class SekolahController extends Controller
     		],
     		[
     			'nama_sekolah.required' => 'Nama sekolah belum diisi',
-    			'id_potensi.required' => 'ID Potensi belum terisi',
     			'id_jenjang_sekolah.required' => 'Jenjang sekolah belum terisi',
     			'id_jenis_sekolah.required' => 'Jenis sekolah belum terisi',
     			'alamat_sekolah.required' => 'Alamat sekolah belum terisi',
@@ -53,7 +51,7 @@ class SekolahController extends Controller
     	]);
 
     	$data = [
-            'id_potensi' => Request()->id_potensi,
+            'id_jenis_potensi' => '1',
             'id_jenjang_sekolah' => Request()->id_jenjang_sekolah,
             'id_jenis_sekolah' => Request()->id_jenis_sekolah,
             'nama_sekolah' => Request()->nama_sekolah,
@@ -81,7 +79,6 @@ class SekolahController extends Controller
         Request()->validate(
             [
                 'nama_sekolah' => 'required',
-                'id_potensi' => 'required',
                 'id_jenjang_sekolah' => 'required',
                 'id_jenis_sekolah' => 'required',
                 'alamat_sekolah' => 'required',
@@ -89,7 +86,6 @@ class SekolahController extends Controller
             ],
             [
                 'nama_sekolah.required' => 'Nama sekolah belum diisi',
-                'id_potensi.required' => 'ID Potensi belum terisi',
                 'id_jenjang_sekolah.required' => 'Jenjang sekolah belum terisi',
                 'id_jenis_sekolah.required' => 'Jenis sekolah belum terisi',
                 'alamat_sekolah.required' => 'Alamat sekolah belum terisi',
@@ -97,7 +93,7 @@ class SekolahController extends Controller
         ]);
 
         $data = [
-            'id_potensi' => Request()->id_potensi,
+            'id_jenis_potensi' => '1',
             'id_jenjang_sekolah' => Request()->id_jenjang_sekolah,
             'id_jenis_sekolah' => Request()->id_jenis_sekolah,
             'nama_sekolah' => Request()->nama_sekolah,

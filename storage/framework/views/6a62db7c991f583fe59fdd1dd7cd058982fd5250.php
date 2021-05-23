@@ -17,7 +17,6 @@
                       <tr>
                         <th width="50px" class="text-center">No</th>
                         <th class="text-center">Nama Sekolah</th>
-                        <th class="text-center">Potensi ID</th>
                         <th class="text-center">Tingkat Sekolah</th>
                         <th class="text-center">Jenis Sekolah</th>
                         <th class="text-center">Alamat</th>
@@ -31,7 +30,6 @@
                       <tr>
                         <td class="text-center"><?php echo e($no++); ?></td>
                         <td class="text-center"><?php echo e($d->nama_sekolah); ?></td>
-                        <td class="text-center"><?php echo e($d->id_potensi); ?></td>
                         <td class="text-center"><?php echo e($d->jenjang_sekolah); ?></td>
                         <td class="text-center"><?php echo e($d->jenis_sekolah); ?></td>
                         <td class="text-center"><?php echo e($d->alamat); ?></td>

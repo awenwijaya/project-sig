@@ -1,5 +1,5 @@
-@extends('layouts.frontend')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <div id="maps" style="height:500px;width:100%;"></div>
 
 <div class="col-md-12">
@@ -7,29 +7,35 @@
 <br>
             <div class="card card-outline card-primary">
               <div class="card-header">
-                <h3 class="card-title">Informasi Logo</h3>
+                <h3 class="card-title">Informasi Sekolah</h3>
 
                 <!-- /.card-tools -->
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <table id="example1" class="table table-bordered table-striped text-small">
+                <table id="example1" class="table table-bordered table-striped text-small">
                     <thead>
                       <tr>
                         <th width="50px" class="text-center">No</th>
-                        <th class="text-center">Potensi Desa</th>
-                        <th class="text-center">Ikon</th>
+                        <th class="text-center">Nama Sekolah</th>
+                        <th class="text-center">Tingkat Sekolah</th>
+                        <th class="text-center">Jenis Sekolah</th>
+                        <th class="text-center">Alamat</th>
+                        <th class="text-center">Koordinat</th>
                       </tr>
                     </thead>
                     <tbody>
                       <?php $no=1; ?>
-                      @foreach($potensiDesa as $d)
+                      <?php $__currentLoopData = $sekolah; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                       <tr>
-                        <td class="text-center">{{ $no++ }}</td>
-                        <td class="text-center">{{ $d->nama_potensi }}</td>
-                        <td class="text-center"><img src="{{ asset('icon') }}/{{ $d->icon }}" width="70px";height="70px";></td>
+                        <td class="text-center"><?php echo e($no++); ?></td>
+                        <td class="text-center"><?php echo e($d->nama_sekolah); ?></td>
+                        <td class="text-center"><?php echo e($d->jenjang_sekolah); ?></td>
+                        <td class="text-center"><?php echo e($d->jenis_sekolah); ?></td>
+                        <td class="text-center"><?php echo e($d->alamat); ?></td>
+                        <td class="text-center"><?php echo e($d->koordinat); ?></td>
                       </tr>
-                      @endforeach
+                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </tbody>
                 </table>
               </div>
@@ -82,48 +88,29 @@
 
     L.control.layers(baseMaps, overlayer).addTo(map);
 
-    @foreach($desa as $d)
+    <?php $__currentLoopData = $desa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         L.geoJSON(<?= $d->batas_desa ?>, {
             style: {
                 color: 'white',
-                fillColor: '{{ $d->warna }}',
+                fillColor: '<?php echo e($d->warna); ?>',
                 fillOpacity: 0.7
             },
-        }).addTo(desa).bindPopup("{{ $d->nama_desa }}");
+        }).addTo(desa).bindPopup("<?php echo e($d->nama_desa); ?>");
 
-    @endforeach
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-    @foreach($sekolah as $s)
+    <?php $__currentLoopData = $sekolah; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         var iconSekolah = L.icon({
-            iconUrl: '{{ asset('icon') }}/{{ $s->icon }}',
+            iconUrl: '<?php echo e(asset('icon')); ?>/<?php echo e($s->icon); ?>',
             iconSize: [25, 25],
         });
 
         L.marker([<?= $s->koordinat ?>], {icon: iconSekolah})
         .addTo(map)
-        .bindPopup('Nama sekolah : <?= $s->nama_sekolah ?> <br> Alamat : <?= $s->alamat ?> <br> Koordinat : <?= $s->koordinat ?>');
-    @endforeach
-
-    @foreach($tempatmakan as $m)
-        var iconTempatMakan = L.icon({
-            iconUrl: '{{ asset('icon') }}/{{ $m->icon }}',
-            iconSize: [25, 25],
-        });
-
-        L.marker([<?= $m->koordinat ?>], {icon: iconTempatMakan}).addTo(map)
-        .bindPopup('Nama: <?= $m->nama ?> <br> Alamat: <?= $m->alamat ?> <br> Koordinat: <?= $m->koordinat ?>');
-    @endforeach
-
-    @foreach($tempatibadah as $i)
-        var iconTempatIbadah = L.icon({
-            iconUrl: '{{ asset('icon') }}/{{ $i->icon }}',
-            iconSize: [25, 25],
-        });
-
-        L.marker([<?= $i->koordinat ?>], {icon: iconTempatIbadah})
-        .addTo(map)
-        .bindPopup('Nama: <?= $i->nama_tempat_ibadah ?> <br> Alamat: <?= $i->alamat ?> <br> Koordinat: <?= $i->koordinat ?>');
-    @endforeach
+        .bindPopup('Nama sekolah : <?= $s->nama_sekolah ?> <br> Alamat : <?= $s->alamat ?> <br> Koordinat : <?= $s->koordinat ?>');;
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.frontend', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\tubesSIG\resources\views/potensiDesa/sekolah.blade.php ENDPATH**/ ?>

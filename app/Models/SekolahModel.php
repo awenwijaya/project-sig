@@ -10,7 +10,7 @@ class SekolahModel extends Model
 {
     public function AllData() {
     	return DB::table('tb_sekolah')
-    	->join('tb_potensi_desa', 'tb_potensi_desa.id', '=', 'tb_sekolah.id_potensi')
+    	->join('tb_jenis_potensi_desa', 'tb_jenis_potensi_desa.id', '=', 'tb_sekolah.id_jenis_potensi')
     	->join('tb_jenjang_sekolah', 'tb_jenjang_sekolah.id', '=', 'tb_sekolah.id_jenjang_sekolah')
     	->join('tb_jenis_sekolah', 'tb_jenis_sekolah.id_jenis_sekolah', '=', 'tb_sekolah.id_jenis_sekolah')
     	->get();
@@ -22,7 +22,7 @@ class SekolahModel extends Model
 
     public function DetailData($id) {
     	return DB::table('tb_sekolah')
-    	->join('tb_potensi_desa', 'tb_potensi_desa.id', '=', 'tb_sekolah.id_potensi')
+    	->join('tb_jenis_potensi_desa', 'tb_jenis_potensi_desa.id', '=', 'tb_sekolah.id_jenis_potensi')
     	->join('tb_jenjang_sekolah', 'tb_jenjang_sekolah.id', '=', 'tb_sekolah.id_jenjang_sekolah')
     	->join('tb_jenis_sekolah', 'tb_jenis_sekolah.id_jenis_sekolah', '=', 'tb_sekolah.id_jenis_sekolah')
     	->where('tb_sekolah.id', $id)->first();

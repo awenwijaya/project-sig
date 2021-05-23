@@ -33,4 +33,9 @@ class PotensiDesaModel extends Model
     	->delete();
     }
 
+    public function DataPotensi($id) {
+        return DB::table('tb_jenis_potensi_desa')
+        ->where('id', $id)
+    	->first();
+    }
 }

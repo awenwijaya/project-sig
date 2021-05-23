@@ -10,7 +10,7 @@ class TempatIbadahModel extends Model
 {
     public function AllData() {
     	return DB::table('tb_tempat_ibadah')
-    	->join('tb_potensi_desa', 'tb_potensi_desa.id', '=', 'tb_tempat_ibadah.id_potensi')
+    	->join('tb_jenis_potensi_desa', 'tb_jenis_potensi_desa.id', '=', 'tb_tempat_ibadah.id_jenis_potensi')
     	->join('tb_agama', 'tb_agama.id', '=', 'tb_tempat_ibadah.id_agama')
     	->get();
     }
@@ -21,7 +21,7 @@ class TempatIbadahModel extends Model
 
     public function DetailData($id) {
         return DB::table('tb_tempat_ibadah')
-        ->join('tb_potensi_desa', 'tb_potensi_desa.id', '=', 'tb_tempat_ibadah.id_potensi')
+        ->join('tb_jenis_potensi_desa', 'tb_jenis_potensi_desa.id', '=', 'tb_tempat_ibadah.id_jenis_potensi')
     	->join('tb_agama', 'tb_agama.id', '=', 'tb_tempat_ibadah.id_agama')
         ->where('tb_tempat_ibadah.id', $id)->first();
     }
