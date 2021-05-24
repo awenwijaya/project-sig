@@ -66,4 +66,16 @@ class WebController extends Controller
 
         return view('potensiDesa/tempatmakan', $data);
 	}
+
+	public function LandingPage() {
+		$data = [
+    		'desa' => $this->WebModel->DataDesa(),
+			'potensidesa' => $this->PotensiDesaModel->AllData(),
+			'sekolah' => $this->SekolahModel->AllData(),
+			'tempatibadah' => $this->TempatIbadahModel->AllData(),
+			'tempatmakan' => $this->TempatMakanModel->AllData(),
+			'potensiDesa' => $this->PotensiDesaModel->AllData(),
+    	];
+		return view('landingPage', $data);
+	}
 }

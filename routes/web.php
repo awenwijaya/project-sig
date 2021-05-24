@@ -22,7 +22,7 @@ use App\Http\Controllers\PotensiDaerahController;
 |
 */
 
-Route::get('/', [WebController::class, 'index']);
+Route::get('/',[WebController::class, 'LandingPage']);
 
 Auth::routes();
 

@@ -53,15 +53,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
         </ul>
       </div>
-
-      <!-- Right navbar links -->
-      <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo e(route('login')); ?>">
-            <i class="fas fa-toolbox"></i>Admin
-          </a>
-        </li>
-      </ul>
     </div>
   </nav>
   <!-- /.navbar -->
