@@ -17,18 +17,18 @@ class DesaModel extends Model
     }
 
     public function DetailData($id) {
-    	return DB::table('tb_desa')->where('id', $id)->first();
+    	return DB::table('tb_desa')->where('id_desa', $id)->first();
     }
 
     public function UpdateData($data, $id) {
     	DB::table('tb_desa')
-    	->where('id', $id)
+    	->where('id_desa', $id)
     	->update($data);	
     }
 
     public function DeleteData($id) {
     	DB::table('tb_desa')
-    	->where('id', $id)
+    	->where('id_desa', $id)
     	->delete();
     } 
 }

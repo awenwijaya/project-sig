@@ -33,8 +33,8 @@
                         <td class="text-center">{{ $d->alamat }}</td>
                         <td class="text-center">{{ $d->koordinat }}</td>
                         <td class="text-center">
-                          <button class="btn btn-sm btn-flat btn-warning"><a href="/tempatibadah/edit/{{ $d->id }}" ><i class="fa fa-edit"></i></a></button>
-                          <button class="btn btn-sm btn-flat btn-danger"><a href="/tempatibadah/delete/{{ $d->id }}" ><i class="fa fa-trash"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-warning"><a href="/tempatibadah/edit/{{ $d->id_tempat_ibadah }}" ><i class="fa fa-edit"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-danger"><a href="/tempatibadah/delete/{{ $d->id_tempat_ibadah }}" ><i class="fa fa-trash"></i></a></button>
                       </tr>
                       @endforeach
                     </tbody>

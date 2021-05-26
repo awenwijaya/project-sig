@@ -13,7 +13,7 @@
                 <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
-                        <label>Text</label>
+                        <label>Nama Desa</label>
                         <input name="nama_desa" type="text" class="form-control" placeholder="Nama Desa">
                         <div class="text-danger">
                         	@error('nama_desa')

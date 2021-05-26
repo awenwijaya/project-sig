@@ -31,8 +31,8 @@
                         <td class="text-center"><?php echo e($d->alamat); ?></td>
                         <td class="text-center"><?php echo e($d->koordinat); ?></td>
                         <td class="text-center">
-                          <button class="btn btn-sm btn-flat btn-warning"><a href="/tempatmakan/edit/<?php echo e($d->id); ?>" ><i class="fa fa-edit"></i></a></button>
-                          <button class="btn btn-sm btn-flat btn-danger"><a href="/tempatmakan/delete/<?php echo e($d->id); ?>" ><i class="fa fa-trash"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-warning"><a href="/tempatmakan/edit/<?php echo e($d->id_tempat_makan); ?>" ><i class="fa fa-edit"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-danger"><a href="/tempatmakan/delete/<?php echo e($d->id_tempat_makan); ?>" ><i class="fa fa-trash"></i></a></button>
                       </tr>
                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </tbody>

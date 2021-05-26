@@ -29,8 +29,8 @@
                         <td class="text-center"><?php echo e($d->nama_desa); ?></td>
                         <td style="background-color: <?php echo e($d->warna); ?>"></td>
                         <td class="text-center">
-                          <button class="btn btn-sm btn-flat btn-warning"><a href="/desa/edit/<?php echo e($d->id); ?>" ><i class="fa fa-edit"></i></a></button>
-                          <button class="btn btn-sm btn-flat btn-danger"><a href="/desa/delete/<?php echo e($d->id); ?>" ><i class="fa fa-trash"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-warning"><a href="/desa/edit/<?php echo e($d->id_desa); ?>" ><i class="fa fa-edit"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-danger"><a href="/desa/delete/<?php echo e($d->id_desa); ?>" ><i class="fa fa-trash"></i></a></button>
                       </tr>
                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </tbody>

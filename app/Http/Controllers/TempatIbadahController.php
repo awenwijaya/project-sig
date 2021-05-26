@@ -85,7 +85,7 @@ class TempatIbadahController extends Controller
 
 			$data = [
 				'nama_tempat_ibadah' => Request()->nama_tempat_ibadah,
-				'id_potensi' => '3',
+				'id_jenis_potensi' => '3',
 				'id_agama' => Request()->id_agama,
 				'alamat' => Request()->alamat,
 				'koordinat' => Request()->koordinat

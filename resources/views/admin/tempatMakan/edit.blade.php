@@ -6,7 +6,7 @@
                 <h3 class="card-title">Edit Tempat Makan</h3>
                 <!-- /.card-tools -->
               </div>
-              <form action="/tempatmakan/update/{{ $tempatmakan->id }}" method="POST">
+              <form action="/tempatmakan/update/{{ $tempatmakan->id_tempat_makan }}" method="POST">
               	@csrf
                  	<!-- /.card-header -->
               <div class="card-body">

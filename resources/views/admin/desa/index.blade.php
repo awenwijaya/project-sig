@@ -29,8 +29,8 @@
                         <td class="text-center">{{ $d->nama_desa }}</td>
                         <td style="background-color: {{$d->warna}}"></td>
                         <td class="text-center">
-                          <button class="btn btn-sm btn-flat btn-warning"><a href="/desa/edit/{{ $d->id }}" ><i class="fa fa-edit"></i></a></button>
-                          <button class="btn btn-sm btn-flat btn-danger"><a href="/desa/delete/{{ $d->id }}" ><i class="fa fa-trash"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-warning"><a href="/desa/edit/{{ $d->id_desa }}" ><i class="fa fa-edit"></i></a></button>
+                          <button class="btn btn-sm btn-flat btn-danger"><a href="/desa/delete/{{ $d->id_desa }}" ><i class="fa fa-trash"></i></a></button>
                       </tr>
                       @endforeach
                     </tbody>

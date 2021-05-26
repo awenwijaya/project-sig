@@ -23,18 +23,18 @@ class TempatIbadahModel extends Model
         return DB::table('tb_tempat_ibadah')
         ->join('tb_jenis_potensi_desa', 'tb_jenis_potensi_desa.id', '=', 'tb_tempat_ibadah.id_jenis_potensi')
     	->join('tb_agama', 'tb_agama.id', '=', 'tb_tempat_ibadah.id_agama')
-        ->where('tb_tempat_ibadah.id', $id)->first();
+        ->where('id_tempat_ibadah', $id)->first();
     }
 
     public function UpdateData($data, $id) {
         DB::table('tb_tempat_ibadah')
-    	->where('id', $id)
+    	->where('id_tempat_ibadah', $id)
     	->update($data);
     }
 
     public function DeleteData($id) {
     	DB::table('tb_tempat_ibadah')
-    	->where('id', $id)
+    	->where('id_tempat_ibadah', $id)
     	->delete();
     }
 }

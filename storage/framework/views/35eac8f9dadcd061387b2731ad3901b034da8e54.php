@@ -6,7 +6,7 @@
                 <h3 class="card-title">Edit Sekolah</h3>
                 <!-- /.card-tools -->
               </div>
-              <form action="/sekolah/update/<?php echo e($sekolah->id); ?>" method="POST">
+              <form action="/sekolah/update/<?php echo e($sekolah->id_sekolah); ?>" method="POST">
                 <?php echo csrf_field(); ?>
                   <!-- /.card-header -->
               <div class="card-body">
@@ -17,23 +17,6 @@
                         <input name="nama_sekolah" type="text" class="form-control" placeholder="Nama Sekolah" value="<?php echo e($sekolah->nama_sekolah); ?>">
                         <div class="text-danger">
                           <?php $__errorArgs = ['nama_sekolah'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                          <?php echo e($message); ?>
-
-                          <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label>ID Potensi</label>
-                        <input name="id_potensi" type="text" class="form-control" placeholder="ID Potensi" value="<?php echo e($sekolah->id_potensi); ?>">
-                        <div class="text-danger">
-                          <?php $__errorArgs = ['id_potensi'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }

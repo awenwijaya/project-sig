@@ -6,14 +6,14 @@
                 <h3 class="card-title">Edit Data Desa</h3>
                 <!-- /.card-tools -->
               </div>
-              <form action="/desa/update/{{ $desa->id }}" method="POST">
+              <form action="/desa/update/{{ $desa->id_desa }}" method="POST">
               	@csrf
                  	<!-- /.card-header -->
               <div class="card-body">
                 <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
-                        <label>Text</label>
+                        <label>Nama Desa</label>
                         <input name="nama_desa" value="{{ $desa->nama_desa }}" type="text" class="form-control" placeholder="Nama Desa">
                         <div class="text-danger">
                         	@error('nama_desa')

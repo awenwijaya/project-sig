@@ -19,18 +19,18 @@ class TempatMakanModel extends Model
     }
 
     public function DetailData($id) {
-    	return DB::table('tb_tempat_makan')->where('id', $id)->first();
+    	return DB::table('tb_tempat_makan')->where('id_tempat_makan', $id)->first();
     }
 
     public function UpdateData($data, $id) {
     	DB::table('tb_tempat_makan')
-    	->where('id', $id)
+    	->where('id_tempat_makan', $id)
     	->update($data);	
     }
 
     public function DeleteData($id) {
     	DB::table('tb_tempat_makan')
-    	->where('id', $id)
+    	->where('id_tempat_makan', $id)
     	->delete();
     } 
 }
