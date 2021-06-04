@@ -4,6 +4,9 @@
             <div class="card card-outline card-primary">
               <div class="card-header">
                 <h3 class="card-title">Tambah Potensi Desa</h3>
+                <div class="card-tools">
+                  <a href="/potensidesa" type="button" class="btn btn-primary btn-sm btn-flat">Kembali</a>
+                </div>
                 <!-- /.card-tools -->
               </div>
               <form action="/potensidesa/insert" method="POST" enctype="multipart/form-data">

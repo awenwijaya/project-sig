@@ -4,6 +4,9 @@
             <div class="card card-outline card-primary">
               <div class="card-header">
                 <h3 class="card-title">Tambah Desa</h3>
+                <div class="card-tools">
+                  <a href="/desa" type="button" class="btn btn-primary btn-sm btn-flat">Kembali</a>
+                </div>
                 <!-- /.card-tools -->
               </div>
               <form action="/desa/insert" method="POST">
@@ -13,7 +16,7 @@
                 <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
-                        <label>Text</label>
+                        <label>Nama Desa</label>
                         <input name="nama_desa" type="text" class="form-control" placeholder="Nama Desa">
                         <div class="text-danger">
                         	<?php $__errorArgs = ['nama_desa'];
@@ -76,7 +79,6 @@ unset($__errorArgs, $__bag); ?>
                     <button class="btn btn-flat btn-primary btn-sm" type="submit">Simpan</button>
               </div>
                  </form>
-                 <button class="btn btn-flat btn-primary btn-sm" href="/desa">Batal</button>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->

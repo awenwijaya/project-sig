@@ -4,6 +4,9 @@
             <div class="card card-outline card-primary">
               <div class="card-header">
                 <h3 class="card-title">Tambah Desa</h3>
+                <div class="card-tools">
+                  <a href="/desa" type="button" class="btn btn-primary btn-sm btn-flat">Kembali</a>
+                </div>
                 <!-- /.card-tools -->
               </div>
               <form action="/desa/insert" method="POST">
@@ -52,7 +55,6 @@
                     <button class="btn btn-flat btn-primary btn-sm" type="submit">Simpan</button>
               </div>
                  </form>
-                 <button class="btn btn-flat btn-primary btn-sm" href="/desa">Batal</button>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->

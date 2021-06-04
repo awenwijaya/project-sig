@@ -4,6 +4,9 @@
             <div class="card card-outline card-primary">
               <div class="card-header">
                 <h3 class="card-title">Edit Tempat Ibadah</h3>
+                <div class="card-tools">
+                  <a href="/sekolah" type="button" class="btn btn-primary btn-sm btn-flat">Kembali</a>
+                </div>
                 <!-- /.card-tools -->
               </div>
               <form action="/tempatibadah/update/{{ $tempatibadah->id_tempat_ibadah }}" method="POST">

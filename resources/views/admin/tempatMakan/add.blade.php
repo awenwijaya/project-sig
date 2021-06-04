@@ -4,6 +4,9 @@
             <div class="card card-outline card-primary">
               <div class="card-header">
                 <h3 class="card-title">Tambah Tempat Makan</h3>
+                <div class="card-tools">
+                  <a href="/sekolah" type="button" class="btn btn-primary btn-sm btn-flat">Kembali</a>
+                </div>
                 <!-- /.card-tools -->
               </div>
               <form action="/tempatmakan/insert" method="POST">
@@ -116,7 +119,6 @@
                     <button class="btn btn-flat btn-primary btn-sm" type="submit">Simpan</button>
               </div>
                  </form>
-                 <button class="btn btn-flat btn-primary btn-sm" href="/desa">Batal</button>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->

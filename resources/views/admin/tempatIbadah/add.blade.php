@@ -4,6 +4,9 @@
             <div class="card card-outline card-primary">
               <div class="card-header">
                 <h3 class="card-title">Tambah Tempat Ibadah</h3>
+                <div class="card-tools">
+                  <a href="/tempatibadah" type="button" class="btn btn-primary btn-sm btn-flat">Kembali</a>
+                </div>
                 <!-- /.card-tools -->
               </div>
               <form action="/tempatibadah/insert" method="POST">
